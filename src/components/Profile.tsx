@@ -10,7 +10,7 @@ const Profile = () => {
                 </div>
                 <div className="user-desc">
                     <p>Report for</p>
-                    <h3>Jeremy Robson</h3>
+                    <h3><span>Jeremy</span> Robson</h3>
                 </div>
             </div>
             <div className="user-time">

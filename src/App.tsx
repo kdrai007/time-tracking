@@ -11,13 +11,15 @@ function App() {
 
 
   return (
-    <>
+    <main>
       <Profile />
-      {jsonData.map((data, index) => {
-        return <Cards key={index} json={data} />
-      })}
+      <div className="cards">
+        {jsonData.map((data, index) => {
+          return <Cards key={index} json={data} />
+        })}
+      </div>
       {/* <Cards json={jsonData} /> */}
-    </>
+    </main>
   )
 }
 

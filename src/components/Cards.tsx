@@ -28,12 +28,12 @@ const cards = ({ json }: CardsProps) => {
                 <img src={`./images/icon-${json.title.toLowerCase() == "self care" ? "self-care" : json.title.toLowerCase()}.svg`} alt="" />
             </div>
             <div className="card-details">
-                <div className="first" style={{ textAlign: "left" }}>
+                <div className="first">
                     <p>{json.title}</p>
-                    <h3>{json.timeframes.weekly.current}hrs</h3>
-                </div>
-                <div className="second">
                     <img src="./images/icon-ellipsis.svg" alt="" />
+                </div>
+                <div className="second" style={{ textAlign: "left" }}>
+                    <h3>{json.timeframes.weekly.current}hrs</h3>
                     <p>Last Week-  {json.timeframes.daily.previous}hrs</p>
                 </div>
             </div>

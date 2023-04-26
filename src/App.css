@@ -29,6 +29,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   padding: 1rem;
 }
 .user-profile {
@@ -112,6 +113,11 @@ body {
   text-align: right;
   height: 8rem;
   font-weight: 300;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+.card-details:hover {
+  background-color: var(--Desaturated-blue);
 }
 .card-details > .first > h3 {
   font-weight: 300;
@@ -126,3 +132,74 @@ body {
   line-height: 4;
 }
 /* .card */
+@media screen and (min-width: 900px) {
+  body {
+    justify-content: center;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .user-profile > .user-details {
+    align-items: start;
+    flex-direction: column;
+    padding: 3rem 5rem 5rem 1.5rem;
+    gap: 2rem;
+  }
+  .user-details > .user-img > img {
+    width: 70px;
+  }
+  .user-desc > p {
+    font-size: 1rem;
+  }
+  .user-desc > h3 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .user-desc > h3 > span {
+    display: block;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    gap: 1rem;
+  }
+  .cards > .main-card {
+    margin-top: initial;
+  }
+
+  .user-profile > .user-time > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .main-card > .card-details {
+    flex-direction: column;
+    padding: 1.5rem;
+    height: initial;
+    align-items: initial;
+    gap: 1rem;
+  }
+  .card-details > .first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  .card-details > .second {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-details > .second > h3 {
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+  .card-details > .second > p {
+    font-size: 0.9rem;
+    line-height: 2;
+  }
+}
